@@ -1,0 +1,177 @@
+/* resets */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{ /*padding top and bottom for all my sections*/
+    padding: 5rem 0;
+}
+
+
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.container{
+    width:100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+.navigation-brand{
+    width: 5rem;
+}
+
+.my-menu i{
+    font-size: 3.5rem;
+    color: #F5F5F5;
+    cursor: pointer;
+}
+
+.close i{
+    color: #00796B;
+}
+
+.open i{
+    color: #00796B;
+}
+
+.navigation-list{
+    width: 25rem;
+    height: 100vh;
+    background-color: #E8F5E9;
+    position: fixed;
+    top: 0;
+    right: -26rem; /*hide entire nav list by default*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+
+.navigation-list.active{
+    right: 0; /* show nav list on click*/
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.navigation-item{
+    margin: 1.5rem 0;
+}
+
+.navigation-link{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #00796B;
+}
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    background: url('./images/m2.jpg') center, no-repeat ;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url('./images/wave-small.png') center, no-repeat ;
+    background-size: cover;
+}
+
+.main-content {
+    margin: 3rem 0;
+    color: #F5F5F5;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 5px 25px 5px 25px ;
+    padding: 5rem 5rem;
+    width: 100%;
+    max-width: 80rem;
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main-content h3 {
+    font-size: 2rem;
+}
+
+.main-content h1{
+    font-size: 2.5rem;
+    font-family: 'Cormorant', sans-serif;
+    margin: 2rem 0;
+    font-weight: lighter;
+}
+
+.main-content p{
+    font-family: 'Cormorant', sans-serif;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 2rem;
+}
+
+.button{
+    background-color: #00796B;
+    color: #fff;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+}
+
+.button:hover{
+    background-color: #80CBC4;
+}
