@@ -116,7 +116,7 @@ nav{
 
 .hero{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background: url('./images/m2.jpg') center, no-repeat ;
     background-size: cover;
     position: relative;
@@ -126,7 +126,7 @@ nav{
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
     height: 4.7rem;
     background: url('./images/wave-small.png') center, no-repeat ;
@@ -145,18 +145,26 @@ nav{
     transform: translateY(20%);
 }
 
-.main-content h3 {
+.main-content h3 , .cosmetics h3{
     font-size: 2rem;
 }
 
+.main-content h3{
+    color: #26A69A;
+}
+
 .main-content h1{
+    color: #fafafa;
+}
+
+.main-content h1, .cosmetics h1{
     font-size: 2.5rem;
     font-family: 'Cormorant', sans-serif;
     margin: 2rem 0;
     font-weight: lighter;
 }
 
-.main-content p{
+.main-content p, .cosmetics p{
     font-family: 'Cormorant', sans-serif;
     font-weight: normal;
     text-transform: lowercase;
@@ -174,4 +182,132 @@ nav{
 
 .button:hover{
     background-color: #80CBC4;
+}
+
+/* Cosmetics & Other Products */
+.cosmetics{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.cosmetics-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.cosmetics-heading h3, h1{
+    color: #00796B;
+}
+
+.cosmetics-heading p{
+    font-size: 2.5rem;
+    color: #00796B
+}
+
+.cosmetics-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.cosmetics-grid-product h4{
+    color: #00796B;
+    font-size: 2.7rem;
+}
+
+
+.cosmetics-grid-product p{
+    font-size: 2.2rem;
+}
+
+.cosmetics-grid-product{
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.cosmetics-grid-product::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.first-product{
+    background: url("images/m3.jpg") center, no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    opacity: 0.85;
+}
+
+
+
+.second-product{
+    background: url("images/m4.jpg") center no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    opacity: 0.85;
+}
+
+.third-product{
+    background: url("images/m5.jpg") center no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    opacity: 0.85;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 2.2rem 0;
+    color: #fafafa;
+    background-color: #26A69A;
+    text-align: center;
+}
+
+/* responsive media queries*/
+@media screen and (min-width: 470px){
+    .hero::before{
+        height: 9.4rem;
+        background: url("images/wave-medium.png");
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px){
+   .navigation-list{
+       width: initial;
+       height: initial;
+       background-color: transparent;
+       position: initial;
+       top: initial;
+       right: initial;
+       flex-direction: row;
+       transition: initial;
+   }
+
+   .my-menu{
+       display: none;
+   }
+
+   .navigation-item{
+       margin: 0 2rem;
+   }
+   .navigation-link{
+    color: #f5f0f0;
+    font-size: 1.5rem;
+   }
+   .navigation-item .navigation-link:hover{
+    color: #80CBC4;
+   }
 }
